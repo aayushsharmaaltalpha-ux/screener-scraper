@@ -5,6 +5,8 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
+ENV PYTHONPATH=/app
+
 EXPOSE 8501
 CMD ["streamlit", "run", "app.py", \
      "--server.port=8501", \
